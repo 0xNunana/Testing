@@ -19,6 +19,18 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Install dependencies
+        run: npm ci
+      - name: run build
+        run: npm run build --if-present
+
+      - name: run component test
+        run: npm test
+      - name: start development 
+        run: npm start 
+      - name: Run visual test on local host
+        run: npm wdio
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
