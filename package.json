@@ -14,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "wdio-prod": "wdio run ./wdio.conf.js -- --logLevel='debug' --baseUrl='https://green-sky-08c61c803.5.azurestaticapps.net/'"
   },
   "eslintConfig": {
     "extends": [
