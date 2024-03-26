@@ -28,7 +28,8 @@ jobs:
       - name: run component test
         run: npm test
       - name: start development 
-        run: npm start 
+        run: npm start &
+             npx wait-on --timeout 60000
       - name: Run visual test on local host
         run: npm wdio
       - name: Build And Deploy
