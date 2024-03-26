@@ -31,7 +31,7 @@ jobs:
         run: npm start &
              npx wait-on --timeout 60000
       - name: Run visual test on local host
-        run: npm wdio
+        run: npm run wdio
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
