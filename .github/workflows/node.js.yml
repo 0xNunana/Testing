@@ -2,7 +2,12 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
-
+#keys are set up in the settings of this project
+env:
+  SCREEN_API_KEY: ${{ secrets.SCREEN_API_KEY }}
+  SAUCE_USER: ${{ secrets.SAUCE_USER }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY}}
+    
 on:
   push:
     branches: [ "main" ]
